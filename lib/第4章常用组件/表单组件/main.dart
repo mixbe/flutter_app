@@ -34,6 +34,7 @@ class _LoginPageState extends State<LoginPage> {
     return new MaterialApp(
       title: 'Form表单示例',
       home: new Scaffold(
+
         appBar: new AppBar(
           title: new Text('Form表单示例'),
         ),
@@ -49,6 +50,7 @@ class _LoginPageState extends State<LoginPage> {
 
                       decoration: new InputDecoration(
                         labelText: '请输入用户名',
+                        hintText: "用户名必须为英文字母"
                       ),
                       onSaved: (value) {
                         userName = value;
@@ -60,6 +62,7 @@ class _LoginPageState extends State<LoginPage> {
                     new TextFormField(
                       decoration: new InputDecoration(
                         labelText: '请输入密码',
+                        hintText: '密码长度不少于6位数'
                       ),
                       obscureText: true,
                       //验证表单方法
@@ -74,6 +77,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
+            // 登录按钮
             new SizedBox(
               width: 340.0,
               height: 42.0,

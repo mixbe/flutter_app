@@ -21,7 +21,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _selectedIndex = 1;//当前选中项的索引
+  int _selectedIndex = 1; //当前选中项的索引
   final _widgetOptions = [
     Text('Index 0: 信息'),
     Text('Index 1: 通讯录'),
@@ -35,18 +35,20 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('BottomNavigationBar示例'),
       ),
       body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),//居中显示某一个文本
+        child: _widgetOptions.elementAt(_selectedIndex), //居中显示某一个文本
       ),
       //底部导航按钮 包含图标及文本
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.chat), title: Text('信息')),
-          BottomNavigationBarItem(icon: Icon(Icons.contacts), title: Text('通讯录')),
-          BottomNavigationBarItem(icon: Icon(Icons.account_circle), title: Text('发现')),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.contacts), title: Text('通讯录')),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.account_circle), title: Text('发现')),
         ],
-        currentIndex: _selectedIndex,//当前选中项的索引
-        fixedColor: Colors.deepPurple,//选项中项的颜色
-        onTap: _onItemTapped,//选择按下处理
+        currentIndex: _selectedIndex, //当前选中项的索引
+        fixedColor: Colors.deepPurple, //选项中项的颜色
+        onTap: _onItemTapped, //选择按下处理
       ),
     );
   }

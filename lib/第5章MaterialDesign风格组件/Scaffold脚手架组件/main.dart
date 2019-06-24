@@ -32,7 +32,7 @@ class LayoutDemo extends StatelessWidget {
         child: Icon(Icons.add),
       ),
       //FAB按钮居中展示
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 }

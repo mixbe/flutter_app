@@ -20,12 +20,15 @@ class ContainerDemo extends StatelessWidget {
       child: new Container(
         width: 200.0,
         height: 200.0,
+        // 绘制在child前面的装饰
+        // 添加边框装饰效果
         decoration: new BoxDecoration(
             color: Colors.white,
             border: new Border.all(
               color: Colors.green,
               width: 8.0,
             ),
+            // 边缘半径
             borderRadius: const BorderRadius.all(const  Radius.circular(48.0))
         ),
         child: new Text(
